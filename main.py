@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
+import openapi
 active_loop = True
 def PrintMenu():
-    pass
+    print("search : s")
 def launcherFunction(menu):
-    pass
+    if menu is 's':
+        key = str(input('input key : '))
+        openapi.LoadXML2API(key)
 while active_loop is True:
     PrintMenu()
     menuKey = str(input('select menu :'))
