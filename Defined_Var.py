@@ -1,1 +1,2 @@
 NAME_KOR = 3
+NAME_ENG = 7
