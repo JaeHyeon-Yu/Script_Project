@@ -27,10 +27,10 @@ def LoadXML2API(key):
                 subitems = item.childNodes
 
                 if subitems[NAME_KOR].firstChild.nodeValue == key:  # 키값(한글명)과 xml 의 한글명이 같으면
-                    dataLst.append(subitems[NAME_KOR].firstChild.nodeValue)
-                    dataLst.append(subitems[NAME_ENG].firstChild.nodeValue)
-                    dataLst.append(subitems[LOCATION].firstChild.nodeValue)
-                    dataLst.append(subitems[INFO].firstChild.nodeValue)
+                    AppendData(subitems[NAME_KOR].firstChild.nodeValue)
+                    AppendData(subitems[NAME_ENG].firstChild.nodeValue)
+                    AppendData(subitems[LOCATION].firstChild.nodeValue)
+                    AppendData(subitems[INFO].firstChild.nodeValue)
                     break
 
         for i in range(len(dataLst)):
@@ -42,3 +42,10 @@ def PrintInfo(num):
     for j in range(len(dataLst[num])):
         print(dataLst[num][j], end='')
     print()
+
+def AppendData(data):
+    # 저장할 데이터를 인자로 받아 dataLst 에 저장한다.
+    if data is None:
+        dataLst.append("")
+    else:
+        dataLst.append(data)

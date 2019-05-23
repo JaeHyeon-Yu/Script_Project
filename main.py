@@ -15,3 +15,6 @@ while active_loop is True:
     PrintMenu()
     menuKey = str(input('select menu :'))
     launcherFunction(menuKey)
+
+window = Tk()
+window.geometry("400x600+750+200")
