@@ -27,14 +27,18 @@ def LoadXML2API(key):
                 subitems = item.childNodes
 
                 if subitems[NAME_KOR].firstChild.nodeValue == key:  # 키값(한글명)과 xml 의 한글명이 같으면
+                    dataLst.append(subitems[NAME_KOR].firstChild.nodeValue)
                     dataLst.append(subitems[NAME_ENG].firstChild.nodeValue)
+                    dataLst.append(subitems[LOCATION].firstChild.nodeValue)
+                    dataLst.append(subitems[INFO].firstChild.nodeValue)
                     break
-        PrintInfo()
 
-def PrintInfo():
-    # dataLst 에 저장된 정보를 출력한다..
-    for i in range(len(dataLst)):
-        # 영문명 출력 : 처음부터 끝까지 루프돌면서 한글자씩 출력
-        for j in range(len(dataLst[i])):
-            print(dataLst[0][j], end='')
+        for i in range(len(dataLst)):
+            PrintInfo(i)
+
+def PrintInfo(num):
+    # dataLst 에 저장된 정보를 출력한다.
+    # 처음부터 끝까지 루프돌면서 한글자씩 출력
+    for j in range(len(dataLst[num])):
+        print(dataLst[num][j], end='')
     print()

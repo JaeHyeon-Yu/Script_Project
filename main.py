@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from openapi import *
+from tkinter import *
 active_loop = True
 def PrintMenu():
     print("search : s")

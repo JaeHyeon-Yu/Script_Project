@@ -33,3 +33,7 @@ url = "http://openAPI.seoul.go.kr:8088/" + password + "/xml/ListCulturalAssetsIn
 데이터 번호
 3 - 한글명
 5 - 한문명
+7 - 영문명
+23 - 정보
+27 - 소재지
+29 - 위치
