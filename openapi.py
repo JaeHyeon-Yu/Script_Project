@@ -2,7 +2,7 @@
 from Defined_Var import *
 from xml.dom.minidom import parseString
 password = '484350454a7a6f733431776467704b'  # 서울데이터포털 인증키
-num_of_data = str(100)
+num_of_data = str(1000)
 dataLst = []
 
 def LoadXML2API(key):
