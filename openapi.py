@@ -8,6 +8,7 @@ dataLst = []
 def LoadXML2API(key):
     # API 에서 XML 을 읽어온다.
     import http.client
+    import mainframe
     url = "/" + password + "/xml/ListCulturalAssetsInfo/1/" + num_of_data + "/"
     conn = http.client.HTTPConnection("openAPI.seoul.go.kr:8088")
     conn.request("GET", url)
@@ -26,7 +27,7 @@ def LoadXML2API(key):
             if item.nodeName == "row":
                 subitems = item.childNodes
 
-                if subitems[NAME_KOR].firstChild.nodeValue == key:  # 키값(한글명)과 xml 의 한글명이 같으면
+                if subitems[NAME_KOR].firstChild.nodeValue == mainframe.inputLabel.get():  # 키값(한글명)과 xml 의 한글명이 같으면
                     AppendData(subitems[NAME_KOR].firstChild.nodeValue)
                     AppendData(subitems[NAME_ENG].firstChild.nodeValue)
                     AppendData(subitems[LOCATION].firstChild.nodeValue)

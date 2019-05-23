@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from openapi import *
+# from openapi import *
 from tkinter import *
 from mainframe import *
 active_loop = False
@@ -9,7 +9,7 @@ def PrintMenu():
 def launcherFunction(menu):
     if menu is 's':
         key = str(input('input key : '))
-        LoadXML2API(key)
+        # LoadXML2API(key)
     elif menu is 'q':
         exit()
 while active_loop is True:
