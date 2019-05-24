@@ -2,20 +2,10 @@
 # from openapi import *
 from tkinter import *
 from mainframe import *
-active_loop = False
-def PrintMenu():
-    print("search : s")
-    print("Exit : q")
-def launcherFunction(menu):
-    if menu is 's':
-        key = str(input('input key : '))
-        # LoadXML2API(key)
-    elif menu is 'q':
-        exit()
-while active_loop is True:
-    PrintMenu()
-    menuKey = str(input('select menu :'))
-    launcherFunction(menuKey)
+from kakaomap import *
+
+
+SearchPos()
 
 window = Tk()
 window.title("문화재 검색 API")

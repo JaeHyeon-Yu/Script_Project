@@ -41,7 +41,7 @@ def PrintInfo(num):
     # dataLst 에 저장된 정보를 출력한다.
     # 처음부터 끝까지 루프돌면서 한글자씩 출력
     import mainframe
-    # for j in range(len(dataLst[num])):
+
     mainframe.RenderText.insert(mainframe.INSERT, dataLst[num])
     mainframe.RenderText.insert(mainframe.INSERT, "\n")
 
