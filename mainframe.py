@@ -26,11 +26,21 @@ def InitSearchButton():
 
 
 def SearchAction():
-    LoadXML2API("봉황각")
-    pass
+    RenderText.configure(state='normal')
+    RenderText.delete(0.0, END)
+    LoadXML2API()
+
+def InitRenderText():
+    global RenderText
+    TempFont = font.Font(mainframe, size=10, weight='bold', family='Consolas')
+    RenderText = Text(mainframe, width=49, height=27, borderwidth=12, relief='ridge')
+    RenderText.pack()
+
+    RenderText.configure(state='disable')
 
 
 def ExuteMainframe():
     InitTopText()
     InitInputLabel()
     InitSearchButton()
+    InitRenderText()

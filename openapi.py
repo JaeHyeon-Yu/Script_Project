@@ -5,7 +5,7 @@ password = '484350454a7a6f733431776467704b'  # 서울데이터포털 인증키
 num_of_data = str(1000)
 dataLst = []
 
-def LoadXML2API(key):
+def LoadXML2API():
     # API 에서 XML 을 읽어온다.
     import http.client
     import mainframe
@@ -40,9 +40,11 @@ def LoadXML2API(key):
 def PrintInfo(num):
     # dataLst 에 저장된 정보를 출력한다.
     # 처음부터 끝까지 루프돌면서 한글자씩 출력
-    for j in range(len(dataLst[num])):
-        print(dataLst[num][j], end='')
-    print()
+    import mainframe
+    # for j in range(len(dataLst[num])):
+    mainframe.RenderText.insert(mainframe.INSERT, dataLst[num])
+    mainframe.RenderText.insert(mainframe.INSERT, "\n")
+
 
 def AppendData(data):
     # 저장할 데이터를 인자로 받아 dataLst 에 저장한다.
