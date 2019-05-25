@@ -33,7 +33,7 @@ def SearchAction():
 def InitRenderText():
     global RenderText
     TempFont = font.Font(mainframe, size=10, weight='bold', family='Consolas')
-    RenderText = Text(mainframe, width=49, height=27, borderwidth=12, relief='ridge')
+    RenderText = Text(mainframe, font=TempFont, width=49, height=27, borderwidth=12, relief='ridge')
     RenderText.pack()
 
     RenderText.configure(state='disable')

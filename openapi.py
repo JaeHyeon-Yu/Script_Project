@@ -15,7 +15,7 @@ def LoadXML2API():
     req = conn.getresponse()
 
     cultureDoc = req.read().decode('utf-8')
-
+    dataLst.clear()
     if cultureDoc is None:
         print("Error!")
     else:
@@ -44,7 +44,6 @@ def PrintInfo(num):
 
     mainframe.RenderText.insert(mainframe.INSERT, dataLst[num])
     mainframe.RenderText.insert(mainframe.INSERT, "\n")
-
 
 def AppendData(data):
     # 저장할 데이터를 인자로 받아 dataLst 에 저장한다.
