@@ -5,8 +5,8 @@ import http.client
 password = "42db2ecfe7ba9890e3152d176b35c4d4"
 
 def SearchPos():
+    header = {'Authorization': 'KakaoAK ' + password}
     conn = http.client.HTTPSConnection("dapi.kakao.com")
-    header = {"Authorization": 'KaKaoAK ' + password}
     conn.request("GET", "/v2/local/geo/coord2regioncode.xml?x=127.1086228&y=37.4012191", headers=header)
 
     req = conn.getresponse()
