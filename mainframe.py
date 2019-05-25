@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import font
 from openapi import LoadXML2API
 from kakaomap import *
+
 def InitMainframe(window):
     global mainframe
     mainframe = Frame(window)

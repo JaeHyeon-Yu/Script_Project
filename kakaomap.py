@@ -2,6 +2,7 @@
 import http.client
 import urllib
 from xml.dom.minidom import parseString
+import Map
 # password = "42db2ecfe7ba9890e3152d176b35c4d4"
 password = "42db2ecfe7ba9890e3152d176b35c4d4"
 
@@ -18,7 +19,7 @@ def SearchPos():
 
     print(rb)
     x, y = ParseDOM(rb)
-
+    Map.DrawMap(x, y)
 
 def ParseDOM(rb):
     parseData = parseString(rb)
@@ -29,13 +30,3 @@ def ParseDOM(rb):
         x = item.childNodes[10].firstChild.nodeValue
         y = item.childNodes[11].firstChild.nodeValue
         return x, y
-
-def ParseTree(rb):
-    from xml.etree import ElementTree
-    tree = ElementTree.fromstring(rb)
-    t = tree.getiterator("result")
-
-    for i in t:
-        x = i.find("x")
-        print(x)
-    pass
