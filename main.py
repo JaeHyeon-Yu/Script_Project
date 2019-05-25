@@ -2,10 +2,6 @@
 # from openapi import *
 from tkinter import *
 from mainframe import *
-from kakaomap import *
-
-
-SearchPos()
 
 window = Tk()
 window.title("문화재 검색 API")

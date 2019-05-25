@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import font
 from openapi import LoadXML2API
-
+from kakaomap import *
 def InitMainframe(window):
     global mainframe
     mainframe = Frame(window)
@@ -36,6 +36,7 @@ def SearchAction():
     RenderText.configure(state='normal')
     RenderText.delete(0.0, END)
     LoadXML2API()
+    SearchPos()
 
 def InitRenderText():
     # 검색 결과 출력창
