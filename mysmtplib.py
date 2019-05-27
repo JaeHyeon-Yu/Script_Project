@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: cp949 -*-
 import smtplib
 from email.base64mime import body_encode as encode_base64
 
@@ -10,7 +10,7 @@ class MySMTP(smtplib.SMTP):
             return encode_base64(response)
 
         def encode_plain(user, password):    
-            s = "₩0%s₩0%s" % (user, password)    
+            s = "\0%s\0%s" % (user, password)    
             return encode_base64(s.encode('ascii'), eol='')
             
         AUTH_PLAIN = "PLAIN"
@@ -39,7 +39,7 @@ class MySMTP(smtplib.SMTP):
             (code, resp) = self.docmd(encode_base64(password))           
         elif authmethod == AUTH_PLAIN:
             temp_encode_plain = str(encode_plain(user, password))
-            temp_encode_plain = temp_encode_plain.replace("₩n","")
+            temp_encode_plain = temp_encode_plain.replace("\n","")
             (code, resp) = self.docmd("AUTH",
                 AUTH_PLAIN + " " + temp_encode_plain)
         elif authmethod == AUTH_CRAM_MD5:

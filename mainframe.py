@@ -45,6 +45,8 @@ def SearchAction():
     InfoText.configure(state='normal')
     InfoText.delete(0.0, END)
     LoadXML2API()
+    kakaomap.SearchPos()
+    InitDrawMap()
 
 def InitNameText(window):
     # 검색 결과 출력창
@@ -75,12 +77,18 @@ def InitMapButton():
     mapButton.pack()
 
 def InitMap(window):
+    # from Map import mData
+    # from PIL import Image, ImageTk
     TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
     Label(window, font=TempFont, text="지도").place(x=390, y=10)
 
-    ph = PhotoImage(file="jido.gif")
-    imgLabel = Label(window, image=ph)
-    imgLabel.place(x=390, y=40)
+def InitDrawMap():
+    import Map
+    import webbrowser
+
+    webbrowser.open("osm.html")
+
+
 
 def InitGmail(window):
     TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
@@ -90,5 +98,10 @@ def InitGmail(window):
     mailLabel = Entry(window, font=TempFont, width=25, borderwidth=5, relief='ridge')
     mailLabel.place(x=390, y=430)
 
-    mailButton = Button(window, font=TempFont, text="보내기", command="")
+    mailButton = Button(window, font=TempFont, text="보내기", command=SendGmail)
     mailButton.place(x=687, y=427)
+
+def SendGmail():
+    import gmail
+    destination = mailLabel.get()
+    gmail.SendMail(destination)
