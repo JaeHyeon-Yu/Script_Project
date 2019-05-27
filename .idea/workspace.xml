@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0074b3e-1bbb-4866-8ccc-e57fc706a9d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/gmail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainframe.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainframe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysmtplib.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysmtplib.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osm.html" beforeDir="false" afterPath="$PROJECT_DIR$/osm.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,18 +32,19 @@
         <counts>
           <entry key="Python Console" value="38" />
           <entry key="dummy" value="3" />
-          <entry key="py" value="5212" />
+          <entry key="py" value="5715" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="5250" />
+          <entry key="Python" value="5753" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="3" />
+          <entry key="gif" value="1" />
+          <entry key="html" value="4" />
           <entry key="md" value="1" />
           <entry key="py" value="6" />
           <entry key="txt" value="1" />
@@ -53,7 +52,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="3" />
+          <entry key="HTML" value="4" />
+          <entry key="Image" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="6" />
@@ -66,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="171">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#48#69#0" expanded="true" />
               </folding>
@@ -76,25 +76,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/o.gif">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/osm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-570" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainframe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="285">
+              <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1558966073903" expanded="true" signature="2701:2775" ph="..." />
-                <marker date="1558966073903" expanded="true" signature="2797:2798" ph="..." />
-                <marker date="1558966073903" expanded="true" signature="3231:3236" ph="..." />
+                <marker date="1558971569811" expanded="true" signature="2510:2523" ph="..." />
+                <marker date="1558971569811" expanded="true" signature="2545:2546" ph="..." />
+                <marker date="1558971569811" expanded="true" signature="2979:2984" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gmail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            <state relative-caret-position="152">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
               <folding>
                 <element signature="e#24#40#0" expanded="true" />
               </folding>
@@ -106,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/mysmtplib.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
-              <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+              <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -130,7 +142,7 @@
         <entry file="file://$PROJECT_DIR$/Map.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="79" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -141,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/openapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="57">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="e#23#48#0" expanded="true" />
                 <marker date="1558959939677" expanded="true" signature="1887:1892" ph="..." />
@@ -177,22 +189,22 @@
       <list>
         <option value="$PROJECT_DIR$/GUI.py" />
         <option value="$PROJECT_DIR$/DrawMap.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Defined_Var.py" />
         <option value="$PROJECT_DIR$/openapi.py" />
         <option value="$PROJECT_DIR$/kakaomap.py" />
-        <option value="$PROJECT_DIR$/Map.py" />
         <option value="$PROJECT_DIR$/mysmtplib.py" />
         <option value="$PROJECT_DIR$/gmail.py" />
+        <option value="$PROJECT_DIR$/Map.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/mainframe.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="770" />
-    <option name="y" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="698" />
+    <option name="y" value="-19" />
+    <option name="width" value="989" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -331,12 +343,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14225501" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14225501" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28555918" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28555918" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -372,67 +384,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/openapi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#23#48#0" expanded="true" />
-            <marker date="1558959939677" expanded="true" signature="1887:1892" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Defined_Var.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/osm.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysmtplib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainframe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1558966073903" expanded="true" signature="2701:2775" ph="..." />
-            <marker date="1558966073903" expanded="true" signature="2797:2798" ph="..." />
-            <marker date="1558966073903" expanded="true" signature="3231:3236" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#48#69#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -448,10 +403,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gmail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        <state relative-caret-position="152">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
           <folding>
             <element signature="e#24#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysmtplib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#23#48#0" expanded="true" />
+            <marker date="1558959939677" expanded="true" signature="1887:1892" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/osm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/o.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#48#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainframe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1558971569811" expanded="true" signature="2510:2523" ph="..." />
+            <marker date="1558971569811" expanded="true" signature="2545:2546" ph="..." />
+            <marker date="1558971569811" expanded="true" signature="2979:2984" ph="..." />
           </folding>
         </state>
       </provider>

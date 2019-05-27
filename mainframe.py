@@ -34,11 +34,11 @@ def InitInputLabel(window):
 def InitSearchButton(window):
     # 검색버튼 삽입
     TempFont = font.Font(window, size=15, weight='bold', family='Consolas')
-    searchButton = Button(window, font=TempFont, text="검색", borderwidth=3, command=SearchAction)
+    searchButton = Button(window, font=TempFont, text="검색", borderwidth=3, command= lambda :SearchAction(window))
     searchButton.place(x=285, y=53)
 
 
-def SearchAction():
+def SearchAction(window):
     # 검색 실행
     NameText.configure(state='normal')
     NameText.delete(0.0, END)
@@ -46,7 +46,7 @@ def SearchAction():
     InfoText.delete(0.0, END)
     LoadXML2API()
     kakaomap.SearchPos()
-    InitDrawMap()
+    InitDrawMap(window)
 
 def InitNameText(window):
     # 검색 결과 출력창
@@ -70,23 +70,14 @@ def InitInfoText(window):
 
     InfoText.configure(state='disable')
 
-def InitMapButton():
-    # Map 출력 버튼
-    TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
-    mapButton = Button(mainframe, font=TempFont, text="지도", command=kakaomap.SearchPos)
-    mapButton.pack()
-
 def InitMap(window):
     # from Map import mData
     # from PIL import Image, ImageTk
     TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
     Label(window, font=TempFont, text="지도").place(x=390, y=10)
 
-def InitDrawMap():
-    import Map
-    import webbrowser
-
-    webbrowser.open("osm.html")
+def InitDrawMap(window):
+    pass
 
 
 
