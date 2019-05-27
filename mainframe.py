@@ -12,6 +12,8 @@ def InitMainframe(window):
     InitSearchButton(window)
     InitNameText(window)
     InitInfoText(window)
+    InitMap(window)
+    InitGmail(window)
     # InitGmailButton()
     # InitMapButton()
 
@@ -66,14 +68,27 @@ def InitInfoText(window):
 
     InfoText.configure(state='disable')
 
-def InitGmailButton():
-    # G-mail 전송 버튼
-    TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
-    mailButton = Button(mainframe, font=TempFont, text="메일", command="")
-    mailButton.pack()
-
 def InitMapButton():
     # Map 출력 버튼
     TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
     mapButton = Button(mainframe, font=TempFont, text="지도", command=kakaomap.SearchPos)
     mapButton.pack()
+
+def InitMap(window):
+    TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
+    Label(window, font=TempFont, text="지도").place(x=390, y=10)
+
+    ph = PhotoImage(file="jido.gif")
+    imgLabel = Label(window, image=ph)
+    imgLabel.place(x=390, y=40)
+
+def InitGmail(window):
+    TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
+    Label(window, font=TempFont, text="메일").place(x=390, y=400)
+
+    global mailLabel
+    mailLabel = Entry(window, font=TempFont, width=25, borderwidth=5, relief='ridge')
+    mailLabel.place(x=390, y=430)
+
+    mailButton = Button(window, font=TempFont, text="보내기", command="")
+    mailButton.place(x=687, y=427)

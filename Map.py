@@ -13,4 +13,3 @@ def DrawMap(x, y):
     folium.Marker([y, x], popup=dataLst[0]).add_to(map_osm)
     map_osm.save("osm.html")
 
-    
