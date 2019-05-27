@@ -29,22 +29,29 @@ def LoadXML2API():
 
                 if subitems[NAME_KOR].firstChild.nodeValue == mainframe.inputLabel.get():  # 키값(한글명)과 xml 의 한글명이 같으면
                     AppendData(subitems[NAME_KOR].firstChild.nodeValue)
+                    AppendData(subitems[NAME_CNS].firstChild.nodeValue)
                     AppendData(subitems[NAME_ENG].firstChild.nodeValue)
                     AppendData(subitems[LOCATION].firstChild.nodeValue)
                     AppendData(subitems[INFO].firstChild.nodeValue)
                     break
+    PrintInfo()
 
-        for i in range(len(dataLst)):
-            PrintInfo(i)
 
-def PrintInfo(num):
+def PrintInfo():
     # dataLst 에 저장된 정보를 출력한다.
     # 처음부터 끝까지 루프돌면서 한글자씩 출력
     import mainframe
 
-    mainframe.RenderText.insert(mainframe.INSERT, dataLst[num])
-    mainframe.RenderText.insert(mainframe.INSERT, "\n")
+    mainframe.NameText.insert(mainframe.INSERT, dataLst[KOR])
 
+    mainframe.NameText.insert(mainframe.INSERT, "(")
+    mainframe.NameText.insert(mainframe.INSERT, dataLst[CNS])
+    mainframe.NameText.insert(mainframe.INSERT, ")")
+
+    mainframe.NameText.insert(mainframe.INSERT, "\n")
+    mainframe.NameText.insert(mainframe.INSERT, dataLst[ENG])
+
+    mainframe.InfoText.insert(mainframe.INSERT, dataLst[INF])
 def AppendData(data):
     # 저장할 데이터를 인자로 받아 dataLst 에 저장한다.
     if data is None:
