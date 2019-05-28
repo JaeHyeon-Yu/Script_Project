@@ -11,10 +11,16 @@ htmlFileName = "osm.html"
 
 senderAddr = "zosua18@gmail.com"     # 보내는 사람 email 주소.
 def SendMail(destination):
+    from openapi import dataLst
     recipientAddr = str(destination)   # 받는 사람 email 주소.
 
-    msg = MIMEBase("multipart", "alternative")
-    msg['Subject'] = "Test email in Python 3.0"
+    # msg = MIMEBase("multipart", "alternative")
+    msg = MIMEText("한글명 : "+str(dataLst[0])+
+                   "\n한문명 : "+str(dataLst[1])+
+                   "\n영문명 : "+str(dataLst[2])+
+                   "\n정보\n"+str(dataLst[4]))
+
+    msg['Subject'] = "문화재 검색 결과 - " + str(dataLst[0])
     msg['From'] = senderAddr
     msg['To'] = recipientAddr
 
@@ -24,7 +30,7 @@ def SendMail(destination):
     htmlFD.close()
 
     # 만들었던 mime을 MIMEBase에 첨부 시킨다.
-    msg.attach(HtmlPart)
+    # msg.attach(HtmlPart)
 
     # 메일을 발송한다.
 
