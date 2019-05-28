@@ -19,7 +19,8 @@ def SearchPos():
 
     print(rb)
     x, y = ParseDOM(rb)
-    Map.DrawMap(x, y)
+    return x, y
+    # Map.DrawMap(x, y)
 
 def ParseDOM(rb):
     parseData = parseString(rb)

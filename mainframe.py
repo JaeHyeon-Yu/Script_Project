@@ -45,7 +45,6 @@ def SearchAction(window):
     InfoText.configure(state='normal')
     InfoText.delete(0.0, END)
     LoadXML2API()
-    kakaomap.SearchPos()
     InitDrawMap(window)
 
 def InitNameText(window):
@@ -73,14 +72,18 @@ def InitInfoText(window):
 def InitMap(window):
     # from Map import mData
     # from PIL import Image, ImageTk
+    global mapCanvas
     TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
     Label(window, font=TempFont, text="지도").place(x=390, y=10)
-
+    mapCanvas = Canvas(window, relief="solid", bd=2, height=300)
+    mapCanvas.place(x=390, y=50)
 def InitDrawMap(window):
-    pass
+    import Map
+    global Image_RestArea
 
-
-
+    x, y = kakaomap.SearchPos()
+    Image_RestArea = Map.Draw_MapImage(x, y)
+    mapCanvas.create_image(160, 100, image=Image_RestArea)
 def InitGmail(window):
     TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
     Label(window, font=TempFont, text="메일").place(x=390, y=400)
