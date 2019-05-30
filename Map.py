@@ -1,11 +1,5 @@
 import folium
-import requests
-
 from tkinter import*
-from io import BytesIO
-import urllib
-import urllib.request
-
 from io import BytesIO
 from PIL import Image, ImageTk
 from urllib.request import urlopen
@@ -36,6 +30,3 @@ def DrawMap(x, y, canvas):
     from openapi import dataLst
     map_osm = folium.Map(location=[y, x], zoom_start=17)
     folium.Marker([y, x], popup=dataLst[0]).add_to(map_osm)
-
-    # Image_RestArea = Draw_MapImage(x, y)
-    # canvas.create_image(160, 100, image=Image_RestArea)

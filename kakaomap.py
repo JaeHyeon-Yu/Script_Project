@@ -2,8 +2,6 @@
 import http.client
 import urllib
 from xml.dom.minidom import parseString
-import Map
-# password = "42db2ecfe7ba9890e3152d176b35c4d4"
 password = "42db2ecfe7ba9890e3152d176b35c4d4"
 
 def SearchPos():
@@ -20,7 +18,6 @@ def SearchPos():
     print(rb)
     x, y = ParseDOM(rb)
     return x, y
-    # Map.DrawMap(x, y)
 
 def ParseDOM(rb):
     parseData = parseString(rb)

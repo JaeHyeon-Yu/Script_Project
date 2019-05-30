@@ -14,8 +14,6 @@ def InitMainframe(window):
     InitInfoText(window)
     InitMap(window)
     InitGmail(window)
-    # InitGmailButton()
-    # InitMapButton()
 
 def InitTopText(window):
     # 타이틀 문장 출력
