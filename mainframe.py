@@ -68,8 +68,6 @@ def InitInfoText(window):
     InfoText.configure(state='disable')
 
 def InitMap(window):
-    # from Map import mData
-    # from PIL import Image, ImageTk
     global mapCanvas
     TempFont = font.Font(mainframe, size=15, weight='bold', family='Consolas')
     Label(window, font=TempFont, text="지도").place(x=390, y=10)
