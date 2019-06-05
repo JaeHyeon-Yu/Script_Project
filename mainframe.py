@@ -14,6 +14,7 @@ def InitMainframe(window):
     InitInfoText(window)
     InitMap(window)
     InitGmail(window)
+    InitTeleButton(window)
 
 def InitTopText(window):
     # 타이틀 문장 출력
@@ -95,3 +96,11 @@ def SendGmail():
     import gmail
     destination = mailLabel.get()
     gmail.SendMail(destination)
+
+def InitTeleButton(window):
+    TempFont = font.Font(window, size=15, weight='bold', family='Consolas')
+    teleButton = Button(window, font=TempFont, text="텔레그램", borderwidth=3, command=ExcuteTele)
+    teleButton.place(x=390, y=500)
+
+def ExcuteTele():
+    pass
