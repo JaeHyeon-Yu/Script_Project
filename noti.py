@@ -21,7 +21,7 @@ bot = telepot.Bot(TOKEN)
 def getData(loc_param, date_param):
     res_list = []
     # url = baseurl+'&LAWD_CD='+loc_param+'&DEAL_YMD='+date_param
-    url = baseurl + str(11001)
+    url = baseurl + str(loc_param)
     #print(url)
     res_body = urlopen(url).read()
     #print(res_body)
