@@ -20,12 +20,13 @@ bot = telepot.Bot(TOKEN)
 
 def getData(loc_param, date_param):
     res_list = []
-    url = baseurl+'&LAWD_CD='+loc_param+'&DEAL_YMD='+date_param
+    # url = baseurl+'&LAWD_CD='+loc_param+'&DEAL_YMD='+date_param
+    url = baseurl + str(11001)
     #print(url)
     res_body = urlopen(url).read()
     #print(res_body)
     soup = BeautifulSoup(res_body, 'html.parser')
-    items = soup.findAll('item')
+    items = soup.findAll('row')
     for item in items:
         item = re.sub('<.*?>', '|', item.text)
         parsed = item.split('|')
