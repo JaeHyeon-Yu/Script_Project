@@ -75,18 +75,18 @@ def handle(msg):
     else:
         noti.sendMessage(chat_id, '모르는 명령어입니다.\n지역 [지역번호], 저장 [지역번호], 확인 중 하나의 명령을 입력하세요.')
 
+def Excute():
+    today = date.today()
+    current_month = today.strftime('%Y%m')
 
-today = date.today()
-current_month = today.strftime('%Y%m')
+    print( '[',today,']received token :', noti.TOKEN )
 
-print( '[',today,']received token :', noti.TOKEN )
+    bot = telepot.Bot(noti.TOKEN)
+    pprint( bot.getMe() )
 
-bot = telepot.Bot(noti.TOKEN)
-pprint( bot.getMe() )
+    bot.message_loop(handle)
 
-bot.message_loop(handle)
+    print('Listening...')
 
-print('Listening...')
-
-while 1:
-  time.sleep(10)
+    while 1:
+        time.sleep(10)

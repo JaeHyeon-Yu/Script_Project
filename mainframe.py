@@ -103,4 +103,5 @@ def InitTeleButton(window):
     teleButton.place(x=390, y=500)
 
 def ExcuteTele():
-    pass
+    from teller import Excute
+    Excute()

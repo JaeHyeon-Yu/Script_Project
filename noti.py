@@ -12,10 +12,10 @@ import re
 from datetime import date, datetime, timedelta
 import traceback
 
-key = '여기에 API KEY를 입력하세요'
-TOKEN = '여기에 텔레그램 토큰을 입력하세요'
+key = '484350454a7a6f733431776467704b'
+TOKEN = '856672593:AAF7ypHaZ_1vxmDr1jO9d93ceJxjvuZYfoI'
 MAX_MSG_LENGTH = 300
-baseurl = 'http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTrade?ServiceKey='+key
+baseurl = 'http://openAPI.seoul.go.kr:8088/' + key + '/xml/ListCulturalAssetsInfo/1/5/'
 bot = telepot.Bot(TOKEN)
 
 def getData(loc_param, date_param):
