@@ -63,8 +63,8 @@ def handle(msg):
     text = msg['text']
     args = text.split(' ')
 
-    if text.startswith('지역') and len(args)>1:
-        print('try to 지역', args[1])
+    if text.startswith('문화재') and len(args)>1:
+        print('try to 문화재', args[1])
         replyAptData( '201705', chat_id, args[1] )
     elif text.startswith('저장')  and len(args)>1:
         print('try to 저장', args[1])
@@ -73,7 +73,7 @@ def handle(msg):
         print('try to 확인')
         check( chat_id )
     else:
-        noti.sendMessage(chat_id, '모르는 명령어입니다.\n지역 [지역번호], 저장 [지역번호], 확인 중 하나의 명령을 입력하세요.')
+        noti.sendMessage(chat_id, '모르는 명령어입니다.\n문화재 [키값], 저장 [키값], 확인 중 하나의 명령을 입력하세요.')
 
 def Excute():
     today = date.today()
