@@ -88,5 +88,5 @@ def Excute():
 
     print('Listening...')
 
-    while 1:
-        time.sleep(10)
+    # while 1:
+    #    time.sleep(10)
