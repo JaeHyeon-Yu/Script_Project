@@ -14,7 +14,6 @@ import traceback
 
 import noti
 
-
 def replyAptData(date_param, user, loc_param='11710'):
     print(user, date_param, loc_param)
     res_list = noti.getData( loc_param, date_param )
@@ -87,6 +86,3 @@ def Excute():
     bot.message_loop(handle)
 
     print('Listening...')
-
-    # while 1:
-    #    time.sleep(10)
