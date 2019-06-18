@@ -70,23 +70,24 @@ def handle(msg):
         save( chat_id, args[1] )
     elif text.startswith('영문명')  and len(args)>1:
         print('try to 영문명', args[1])
-        save( chat_id, args[1] )
+        replyAptData('영문명', chat_id, args[1])
     elif text.startswith('한문명')  and len(args)>1:
         print('try to 한문명', args[1])
-        save( chat_id, args[1] )
+        replyAptData('한문명', chat_id, args[1])
     elif text.startswith('한글명')  and len(args)>1:
         print('try to 한글명', args[1])
-        save( chat_id, args[1] )
+        replyAptData('한글명', chat_id, args[1])
     elif text.startswith('한글설명')  and len(args)>1:
         print('try to 한글설명', args[1])
-        save( chat_id, args[1] )
+        replyAptData('한글설명', chat_id, args[1])
     elif text.startswith('영문설명')  and len(args)>1:
         print('try to 영문설명', args[1])
+        replyAptData('영문설명', chat_id, args[1])
     elif text.startswith('확인'):
         print('try to 확인')
         check( chat_id )
     else:
-        noti.sendMessage(chat_id, '모르는 명령어입니다.\n문화재 [키값], 저장 [키값], 확인 중 하나의 명령을 입력하세요.')
+        noti.sendMessage(chat_id, '모르는 명령어입니다.\n주소, 영문명, 한문명, 한글명, 한글설명, 영문설명 [키값], 저장 [키값], 확인 중 하나의 명령을 입력하세요.')
 
 def Excute():
     today = date.today()
