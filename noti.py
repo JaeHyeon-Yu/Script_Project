@@ -26,7 +26,20 @@ def getData(loc_param, date_param):
     res_body = urlopen(url).read()
     #print(res_body)
     soup = BeautifulSoup(res_body, 'html.parser')
-    items = soup.findAll('row')
+
+    if date_param == '주소':
+        items = soup.findAll('stand_addr')
+    elif date_param == '영문명':
+        items = soup.findAll('name_eng')
+    elif date_param == '한문명':
+        items = soup.findAll('name_cni')
+    elif date_param == '한글명':
+        items = soup.findAll('name_kor')
+    elif date_param == '한글설명':
+        items = soup.findAll('board_kor')
+    elif date_param == '영문설명':
+        items = soup.findAll('board_eng')
+
     for item in items:
         item = re.sub('<.*?>', '|', item.text)
         parsed = item.split('|')

@@ -102,6 +102,11 @@ def InitTeleButton(window):
     teleButton = Button(window, font=TempFont, text="텔레그램", borderwidth=3, command=ExcuteTele)
     teleButton.place(x=390, y=500)
 
+def InitSpam(window):
+    TempFont = font.Font(window, size=15, weight='bold', family='Consolas')
+    # Label(window, font=TempFont, text="정보").place(x=130, y=220)
+    pass
+
 def ExcuteTele():
     from teller import Excute
     Excute()

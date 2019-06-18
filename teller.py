@@ -15,7 +15,7 @@ import traceback
 import noti
 
 def replyAptData(date_param, user, loc_param='11710'):
-    print(user, date_param, loc_param)
+    print("yjh", user, date_param, loc_param)
     res_list = noti.getData( loc_param, date_param )
     msg = ''
     for r in res_list:
@@ -62,12 +62,26 @@ def handle(msg):
     text = msg['text']
     args = text.split(' ')
 
-    if text.startswith('문화재') and len(args)>1:
-        print('try to 문화재', args[1])
-        replyAptData( '201705', chat_id, args[1] )
+    if text.startswith('주소') and len(args)>1:
+        print('try to 주소', args[1])
+        replyAptData( '주소', chat_id, args[1] )
     elif text.startswith('저장')  and len(args)>1:
         print('try to 저장', args[1])
         save( chat_id, args[1] )
+    elif text.startswith('영문명')  and len(args)>1:
+        print('try to 영문명', args[1])
+        save( chat_id, args[1] )
+    elif text.startswith('한문명')  and len(args)>1:
+        print('try to 한문명', args[1])
+        save( chat_id, args[1] )
+    elif text.startswith('한글명')  and len(args)>1:
+        print('try to 한글명', args[1])
+        save( chat_id, args[1] )
+    elif text.startswith('한글설명')  and len(args)>1:
+        print('try to 한글설명', args[1])
+        save( chat_id, args[1] )
+    elif text.startswith('영문설명')  and len(args)>1:
+        print('try to 영문설명', args[1])
     elif text.startswith('확인'):
         print('try to 확인')
         check( chat_id )
