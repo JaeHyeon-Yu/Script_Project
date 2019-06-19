@@ -122,7 +122,7 @@ def DrawGraph():
     global subwin
     subwin = Tk()
     subwin.title("소재지 그래프")
-    w, h = 1000, 300
+    w, h = 1200, 300
     canvas = Canvas(subwin, width=w, height=h)
     canvas.pack()
 
@@ -132,6 +132,59 @@ def DrawGraph():
     for i in reversed(range(25)):
         canvas.create_rectangle(i * ww + 10, h - locData[i] * (h - 20) / max_count,
                                          (i + 1) * ww + 10, h - 10, tags='grim')
+
         if locData[i] != 0:
-            canvas.create_text(i * ww + 10 + 7, h - locData[i] * (h - 20) / max_count - 5,
+            canvas.create_text(i * ww + 30, h - locData[i] * (h - 20) / max_count - 5,
                                     text=str(locData[i]), tags="grim")
+        canvas.create_text(i * ww + 30, h - 10 + 5, text=LocText(i), tags="grim")
+def LocText(n):
+    if n == 0:
+        return "강남구"
+    elif n == 1:
+        return "강동구"
+    elif n == 2:
+        return "강북구"
+    elif n == 3:
+        return "강서구"
+    elif n == 4:
+        return "관악구"
+    elif n == 5:
+        return "광진구"
+    elif n == 6:
+        return "구로구"
+    elif n == 7:
+        return "금천구"
+    elif n == 8:
+        return "노원구"
+    elif n == 9:
+        return "도봉구"
+    elif n == 10:
+        return "동대문구"
+    elif n == 11:
+        return "동작구"
+    elif n == 12:
+        return "마포구"
+    elif n == 13:
+        return "서대문구"
+    elif n == 14:
+        return "서초구"
+    elif n == 15:
+        return "성동구"
+    elif n == 16:
+        return "성북구"
+    elif n == 17:
+        return "송파구"
+    elif n == 18:
+        return "양천구"
+    elif n == 19:
+        return "영등포구"
+    elif n == 20:
+        return "용산구"
+    elif n == 21:
+        return "은평구"
+    elif n == 22:
+        return "종로구"
+    elif n == 23:
+        return "중구"
+    elif n == 24:
+        return "중랑구"
