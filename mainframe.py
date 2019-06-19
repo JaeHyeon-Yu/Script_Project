@@ -122,4 +122,16 @@ def DrawGraph():
     global subwin
     subwin = Tk()
     subwin.title("소재지 그래프")
+    w, h = 1000, 300
+    canvas = Canvas(subwin, width=w, height=h)
+    canvas.pack()
 
+    max_count = int(max(locData))
+    canvas.create_line(10, h - 10, w - 10, h - 10)
+    ww = (w - 25) / 25
+    for i in reversed(range(25)):
+        canvas.create_rectangle(i * ww + 10, h - locData[i] * (h - 20) / max_count,
+                                         (i + 1) * ww + 10, h - 10, tags='grim')
+        if locData[i] != 0:
+            canvas.create_text(i * ww + 10 + 7, h - locData[i] * (h - 20) / max_count - 5,
+                                    text=str(locData[i]), tags="grim")
