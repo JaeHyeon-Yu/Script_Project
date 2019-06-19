@@ -15,6 +15,7 @@ def InitMainframe(window):
     InitMap(window)
     InitGmail(window)
     InitTeleButton(window)
+    InitGraphButton(window)
 
 def InitTopText(window):
     # 타이틀 문장 출력
@@ -110,3 +111,8 @@ def InitSpam(window):
 def ExcuteTele():
     from teller import Excute
     Excute()
+
+def InitGraphButton(window):
+    TempFont = font.Font(window, size=15, weight='bold', family='Consolas')
+    teleButton = Button(window, font=TempFont, text="그래프", borderwidth=3, command=ExcuteTele)
+    teleButton.place(x=510, y=500)
