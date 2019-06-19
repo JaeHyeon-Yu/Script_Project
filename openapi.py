@@ -33,7 +33,9 @@ def LoadXML2API():
                     AppendData(subitems[NAME_ENG].firstChild.nodeValue)
                     AppendData(subitems[LOCATION].firstChild.nodeValue)
                     AppendData(subitems[INFO].firstChild.nodeValue)
+                    AppendData(subitems[27].firstChild.nodeValue)
                     break
+
     PrintInfo()
 
 
@@ -52,6 +54,58 @@ def PrintInfo():
     mainframe.NameText.insert(mainframe.INSERT, dataLst[ENG])
 
     mainframe.InfoText.insert(mainframe.INSERT, dataLst[INF])
+
+    if dataLst[LOC] == "강남구":
+        mainframe.locData[0] += 1
+    elif dataLst[LOC] == "강동구":
+        mainframe.locData[1] += 1
+    elif dataLst[LOC] == "강북구":
+        mainframe.locData[2] += 1
+    elif dataLst[LOC] == "강서구":
+        mainframe.locData[3] += 1
+    elif dataLst[LOC] == "관악구":
+        mainframe.locData[4] += 1
+    elif dataLst[LOC] == "광진구":
+        mainframe.locData[5] += 1
+    elif dataLst[LOC] == "구로구":
+        mainframe.locData[6] += 1
+    elif dataLst[LOC] == "금천구":
+        mainframe.locData[7] += 1
+    elif dataLst[LOC] == "노원구":
+        mainframe.locData[8] += 1
+    elif dataLst[LOC] == "도봉구":
+        mainframe.locData[9] += 1
+    elif dataLst[LOC] == "동대문구":
+        mainframe.locData[10] += 1
+    elif dataLst[LOC] == "동작구":
+        mainframe.locData[11] += 1
+    elif dataLst[LOC] == "마포구":
+        mainframe.locData[12] += 1
+    elif dataLst[LOC] == "서대문구":
+        mainframe.locData[13] += 1
+    elif dataLst[LOC] == "서초구":
+        mainframe.locData[14] += 1
+    elif dataLst[LOC] == "성동구":
+        mainframe.locData[15] += 1
+    elif dataLst[LOC] == "성북구":
+        mainframe.locData[16] += 1
+    elif dataLst[LOC] == "송파구":
+        mainframe.locData[17] += 1
+    elif dataLst[LOC] == "양천구":
+        mainframe.locData[18] += 1
+    elif dataLst[LOC] == "영등포구":
+        mainframe.locData[19] += 1
+    elif dataLst[LOC] == "용산구":
+        mainframe.locData[20] += 1
+    elif dataLst[LOC] == "은평구":
+        mainframe.locData[21] += 1
+    elif dataLst[LOC] == "종로구":
+        mainframe.locData[22] += 1
+    elif dataLst[LOC] == "중구":
+        mainframe.locData[23] += 1
+    elif dataLst[LOC] == "중랑구":
+        mainframe.locData[24] += 1
+
 def AppendData(data):
     # 저장할 데이터를 인자로 받아 dataLst 에 저장한다.
     if data is None:

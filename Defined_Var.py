@@ -8,3 +8,4 @@ KOR = 0
 CNS = 1
 ENG = 2
 INF = 4
+LOC = 5

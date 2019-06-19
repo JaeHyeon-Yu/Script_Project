@@ -2,9 +2,10 @@ from tkinter import *
 from tkinter import font
 from openapi import LoadXML2API
 import kakaomap
-
+locData = [0]*25
 def InitMainframe(window):
     global mainframe
+
     mainframe = Frame(window)
     mainframe.pack()
     InitTopText(window)
@@ -114,5 +115,11 @@ def ExcuteTele():
 
 def InitGraphButton(window):
     TempFont = font.Font(window, size=15, weight='bold', family='Consolas')
-    teleButton = Button(window, font=TempFont, text="그래프", borderwidth=3, command=ExcuteTele)
+    teleButton = Button(window, font=TempFont, text="그래프", borderwidth=3, command=DrawGraph)
     teleButton.place(x=510, y=500)
+
+def DrawGraph():
+    global subwin
+    subwin = Tk()
+    subwin.title("소재지 그래프")
+
