@@ -9,7 +9,8 @@ def LoadXML2API():
     # API 에서 XML 을 읽어온다.
     import http.client
     import mainframe
-    url = "/" + password + "/xml/ListCulturalAssetsInfo/1/" + num_of_data + "/"
+    import spam
+    url = spam(password)
     conn = http.client.HTTPConnection("openAPI.seoul.go.kr:8088")
     conn.request("GET", url)
     req = conn.getresponse()
